@@ -1,12 +1,10 @@
 <ion-view view-title="Profile">
   <ion-content style="background-image:url({{user.imageUrl}}); background-repeat: no-repeat; background-size: 100% auto">
-
-  <div class="list">
-    <div class="item clearfix">
-      <a href="#/chat/1" class="button button-icon icon ion-chatbubbles pull-right" style="float:right"></a>
-      <h2>{{user.name}}</h2>
-      <p>{{user.tagline}}</p>
-    </div>
-  </div>
   </ion-content>
+  <div style="position: absolute;bottom:15%;left:10%;right:10%">
+    <h2>{{user.name}}</h2>
+    <p>{{user.tagline}}</p>
+    <a href="#/chat/1" class="button button-large button-icon icon ion-chatbubbles pull-right" style="position:absolute;right:0;bottom:10%"></a>
+  </div>
+
 </ion-view>

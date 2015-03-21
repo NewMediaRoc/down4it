@@ -29,8 +29,8 @@ angular.module('starter.controllers', [])
 
   })
   .controller('EventsNewCtrl', function($scope) {})
-  .controller('EventCtrl', function($scope, $state) {
-    console.log($state.params.eventId);
+  .controller('EventCtrl', function($scope, $stateParams) {
+    console.log($stateParams.eventId);
 //Use $window.innerHeight to get the height of the viewport
 
     $scope.event = {
@@ -43,8 +43,8 @@ angular.module('starter.controllers', [])
     ];
 
   })
-  .controller('ProfileCtrl', function($scope, $state) {
-    console.log($state.params.eventId);
+  .controller('ProfileCtrl', function($scope, $stateParams) {
+    console.log($stateParams.eventId);
     $scope.user = {
       name: 'Brian Witt',
       imageUrl: 'https://scontent-iad.xx.fbcdn.net/hphotos-xfp1/t31.0-8/q83/s960x960/10482319_10100981404444665_795167157213236177_o.jpg',
@@ -57,7 +57,12 @@ angular.module('starter.controllers', [])
   .controller('ChatCtrl', function($scope, $stateParams, Chats) {
     $scope.chat = Chats.get($stateParams.chatId);
   })
-  .controller('ConnectionsCtrl', function($scope) {})
+  .controller('ConnectionsCtrl', function($scope, Chats) {
+    $scope.chats = Chats.all();
+    $scope.remove = function(chat) {
+      Chats.remove(chat);
+    }
+  })
 ;
 
 
