@@ -31,8 +31,10 @@ angular.module('starter.controllers', [])
       tagline: 'Life is but a dream...'
     };
   })
-  .controller('ChatCtrl', function($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
+  .controller('ChatCtrl', function($scope, $stateParams, Chats, Events, Users) {
+    $scope.user = Users.get($stateParams.userId);
+    var event = Events.get($stateParams.eventId);
+    $scope.chat = Chats.get($stateParams.userId);
   })
   .controller('ConnectionsCtrl', function($scope, Chats) {
     $scope.chats = Chats.all();
