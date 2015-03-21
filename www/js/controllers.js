@@ -6,30 +6,16 @@ angular.module('starter.controllers', [])
     $scope.events = events.all();
   })
   .controller('EventsNewCtrl', function($scope) {})
-  .controller('EventCtrl', function($scope, $state) {
-    console.log($state.params.eventId);
+  .controller('EventCtrl', function($scope, $stateParams, events) {
+    console.log($stateParams.eventId);
 //Use $window.innerHeight to get the height of the viewport
 
-    $scope.event = {
-
-    }
-    $scope.items = [
-      {name:"Brian Witt", sex:"m",  date: "3/21/15", imgUrl: "https://www.filepicker.io/api/file/AQR9NAIiTw6grdY5OpWn?signature=80b5fd73e82069fda0bf5c96decc872f123e86ee60bea9358441babbbc44206f&policy=eyJleHBpcnkiOjE0MjY5Nzg4MTksImNhbGwiOlsicGljayIsInJlYWQiLCJ3cml0ZSIsInN0b3JlIl19" },
-      {name:"Katy Perry", date: "3/26/15", imgUrl: "http://s1.ticketm.net/tm/en-us/dbimages/163544a.jpg" },
-      {name:"Jog Around Cobbs Hill", date: "tonight" }
-    ];
-
+    $scope.event = events.get($stateParams.eventId);
+    $scope.users = $scope.event.users;
   })
-  .controller('ProfileCtrl', function($scope, $state) {
-    console.log($state.params.eventId);
-    $scope.user = {
-      name: 'Brian Witt',
-      imageUrl: 'https://scontent-iad.xx.fbcdn.net/hphotos-xfp1/t31.0-8/q83/s960x960/10482319_10100981404444665_795167157213236177_o.jpg',
-      gender: 'Male',
-      relationshipType: 'friendship',
-      genderInterest: 'Women',
-      tagline: 'Life is but a dream...'
-    };
+  .controller('ProfileCtrl', function($scope, $stateParams, users) {
+    console.log($stateParams.userId);
+    $scope.user = users.get($stateParams.userId);
   })
   .controller('ChatCtrl', function($scope, $stateParams, Chats) {
     $scope.chat = Chats.get($stateParams.chatId);
