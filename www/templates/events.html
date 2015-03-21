@@ -9,10 +9,11 @@
     <ion-list type="card">
       <ion-item ng-repeat="item in items | filter:filterText"
                 class="item-thumbnail-left" href="#/event">
-          <img ng-if="item.imgUrl" ng-src="{{item.imgUrl}}">
+          <img ng-show="item.imgUrl" ng-src="{{item.imgUrl}}">
           <h2>{{item.name}}</h2>
           <h3>{{item.date}}</h3>
-          <h3>{{item.peopleCount}} up</h3>
+          <h3>{{item.upForItCount}} Up4It</h3>
+          <h3 ng-show="item.userIsUpForIt">You're Up4It</h3>
       </ion-item>
     </ion-list>
   </ion-content>
