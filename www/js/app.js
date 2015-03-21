@@ -52,7 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 //      url: '/chats',
 //      views: {
 //        'tab-chats': {
-//          templateUrl: 'templates/tab-chats.html',
+//          templateUrl: 'templates/connections.html',
 //          controller: 'ChatsCtrl'
 //        }
 //      }
@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 //      url: '/chats/:chatId',
 //      views: {
 //        'tab-chats': {
-//          templateUrl: 'templates/chat-detail.html',
+//          templateUrl: 'templates/chat.html',
 //          controller: 'ChatDetailCtrl'
 //        }
 //      }
@@ -77,64 +77,48 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 //    }
 //  });
 
-      .state('login', {
-        url: '/login',
-        templateUrl: 'templates/login.html',
-        controller: 'LoginCtrl'
-      })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+    })
 
-      .state('me', {
-        url: '/me',
-        templateUrl: 'templates/me.html',
-        controller: 'MeCtrl'
-      })
-      .state('events', {
-        url: '/events',
-        templateUrl: 'templates/events.html',
-        controller: 'EventsCtrl'
-      })
+    .state('me', {
+      url: '/me',
+      templateUrl: 'templates/me.html',
+      controller: 'MeCtrl'
+    })
+    .state('events', {
+      url: '/events',
+      templateUrl: 'templates/events.html',
+      controller: 'EventsCtrl'
+    })
 
-      .state('new-event', {
-        url: '/new-event',
-        views: {
-          'tab-account': {
-            templateUrl: 'templates/events-new.html',
-            controller: 'EventsNewCtrl'
-          }
-        }
-      })
+    .state('new-event', {
+      url: '/new-event',
+      templateUrl: 'templates/events-new.html',
+      controller: 'EventsNewCtrl'
+    })
 
     .state('event', {
-      url: '/event/',
+      url: '/event/:eventId',
       templateUrl: 'templates/event.html',
       controller: 'EventCtrl'
     })
     .state('profile', {
-      url: '/profile',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/profile.html',
-          controller: 'ProfileCtrl'
-        }
-      }
+      url: '/profile/:userId',
+      templateUrl: 'templates/profile.html',
+      controller: 'ProfileCtrl'
     })
     .state('chat', {
       url: '/chat',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/chat.html',
-          controller: 'ChatCtrl'
-        }
-      }
+      templateUrl: 'templates/chat.html',
+      controller: 'ChatCtrl'
     })
     .state('connections', {
       url: '/connections',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/connections.html',
-          controller: 'ConnectionsCtrl'
-        }
-      }
+      templateUrl: 'templates/connections.html',
+      controller: 'ConnectionsCtrl'
     })
   ;
 
