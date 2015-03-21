@@ -63,7 +63,7 @@ angular.module('starter.services', [])
     }
   };
 })
-.factory('data', function() {
+.factory('events', function() {
   var events = [{
     id: 0,
     name: 'Startup Weekend',
