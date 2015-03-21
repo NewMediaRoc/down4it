@@ -1,0 +1,15 @@
+<ion-view view-title="Events">
+  <ion-content class="padding">
+
+
+
+    <ion-list type="card">
+      <ion-item ng-repeat="item in items | filter:filterText"
+                class="item-thumbnail-left" href="#/event">
+          <img ng-src="{{item.imgUrl}}">
+          <h2>{{item.name}}</h2>
+          <h3>{{item.date}}</h3>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
