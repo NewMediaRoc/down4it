@@ -1,33 +1,51 @@
 <ion-view view-title="{{event.name}}">
-  <ion-content>
-    <div class="list">
-      <div class="item">
-        <div class="row">
-          <div class="col-20">
-            <img ng-src="{{event.imgUrl}}" style="max-width:90%;max-height:100%" />
-          </div>
-          <div class="col-60">
-            <h2>{{event.name}}</h2>
-            <p>{{event.description}}</p>
-          </div>
-          <div class="col-20 text-right">
-            <button type="button" class="button button-icon button-large ion-thumbsup" ng-class="{'stable':!event.userIsUpForIt, 'positive':event.userIsUpForIt}"></button>
-          </div>
-        </div>
-      </div>
+  <ion-content class="card event-card" ng-class="{'panel-shown':event.userIsUpForIt, 'panel-hidden':!event.userIsUpForIt}" >
+    <button type="button" class="button button-icon button-large pull-right padding" ng-click="event.userIsUpForIt=!event.userIsUpForIt">
+      <img ng-show="event.userIsUpForIt" src="img/Me-.png" style="max-height:60px;"/>
+      <img ng-hide="event.userIsUpForIt"src="img/Me+.png" style="max-height:60px;" />
+    </button>
+    <div style="padding-right:80px">
+      <img ng-src="{{event.imgUrl}}" class="event-image" />
     </div>
+    <h3>{{event.date}}</h3>
+    <!--<h2>{{event.name}}</h2>-->
+    <p>{{event.description}}</p>
 
-
-    <ion-list type="card">
-      <ion-item ng-repeat="user in users | filter:filterText"
-                class="item-thumbnail-left" href="#/profile/{{user.profile.id}}?eventId={{event.id}}">
-          <img ng-src="{{user.profile.profileImage}}">
-          <h2>{{user.profile.name}}</h2>
-          <h3>{{user.profile.blurb}}</h3>
-          <h3>{{user.profile.gender}}</h3>
-          <h3>Looking for {{user.preferences.relationshipType}}</h3>
-          <h3>Interested in {{user.preferences.genderInterest}}</h3>
-      </ion-item>
-    </ion-list>
   </ion-content>
+
+  <ion-content class="slide-in-panel clearfix">
+    <!--<div class="list">-->
+      <!--<div class="item">-->
+        <!--<div class="row">-->
+          <!--<div class="col-20">-->
+
+          <!--</div>-->
+          <!--<div class="col-60">-->
+
+          <!--</div>-->
+          <!--<div class="col-20 text-right">-->
+
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<ion-list type="card">-->
+      <!--<ion-item ng-repeat="user in users | filter:filterText"-->
+                <!--class="item-thumbnail-left" href="#/profile/{{user.profile.id}}?eventId={{event.id}}">-->
+          <!--<img ng-src="{{user.profile.profileImage}}">-->
+          <!--<h2>{{user.profile.name}}</h2>-->
+          <!--<h3>{{user.profile.blurb}}</h3>-->
+          <!--<h3>{{user.profile.gender}}</h3>-->
+          <!--<h3>Looking for {{user.preferences.relationshipType}}</h3>-->
+          <!--<h3>Interested in {{user.preferences.genderInterest}}</h3>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+    <a class="card" style="max-width:30%;float:left" ng-repeat="user in users | filter:filterText"
+      href="#/profile/{{user.profile.id}}?eventId={{event.id}}">
+      <img ng-src="{{user.profile.profileImage}}" style="max-width:100%;max-height:100%">
+    </a>
+
+</ion-content>
 </ion-view>

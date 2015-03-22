@@ -105,3 +105,33 @@ input.h1 {
    border-width: 15px 40px 0 0;
    border-color: transparent #075698;
  }
+.panel-shown,
+.panel-hidden {
+  margin:0;
+}
+.panel-shown {
+  height: 100%;
+  width: 100%;
+}
+.panel-shown + .slide-in-panel {
+  top:100%;
+}
+.panel-hidden + .slide-in-panel {
+  top:204px;
+  transition: top 1s ease-out;
+}
+.panel-hidden {
+  width:100%;
+  height:160px;
+  transition: height 1s ease-out;
+}
+.event-image {
+  max-width:90%;
+  max-height:100%
+}
+.panel-hidden .event-image {
+  max-width: 30%;
+  transition: max-width 1s ease-out;
+}
+
+
