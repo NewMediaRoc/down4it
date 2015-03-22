@@ -35,19 +35,19 @@ angular.module('starter.services', [])
       { fromUser: true, text: 'Perfect, see you at 7:30.' }
     ],
     1: [
-      { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
+      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }
     ],
     2: [
-      { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
+      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }
     ],
     3: [
-      { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
+      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }
     ],
     4: [
-      { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
+      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }
     ],
     5: [
-      { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
+      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }
     ]
   };
 
@@ -103,7 +103,7 @@ angular.module('starter.services', [])
     description: 'Katy Perry live in concert at CMAC',
     category: 'concert',
     date: '3/26/15',
-    imgUrl: 'http://s1.ticketm.net/tm/en-us/dbimages/163544a.jpg',
+    imgUrl: '/img/events/katyperry.jpg',
     userIsUpForIt: false,
     users: [{
       id: 0,
@@ -155,28 +155,28 @@ angular.module('starter.services', [])
       id: 0,
       name: 'Kelly Programmer',
       blurb: 'I love the codez',
-      profileImage: 'http://bashny.net/uploads/images/00/00/01/2013/07/25/3359235012.jpg',
+      profileImage: '/img/users/0.jpg',
       gender: 'Female'
     },
     {
       id: 1,
       name: 'Sarah Analyst',
       blurb: 'Algorithms drive me wild',
-      profileImage: 'http://www2.pictures.stylebistro.com/gi/Zooey+Deschanel+Long+Hairstyles+Long+Straight+vfshTCL90Nyl.jpg',
+      profileImage: '/img/users/1.jpg',
       gender: 'Female'
     },
     {
       id: 2,
       name: 'Steve Designer',
       blurb: 'Helvetica forever!',
-      profileImage: 'http://whitneyleephotography.com/blog/andrew%20headshot/2.jpeg',
+      profileImage: '/img/users/2.jpg',
       gender: 'Male'
     },
     {
       id: 3,
       name: 'Brian Witt',
       blurb: 'I hate going to the grocery store alone',
-      profileImage: 'https://scontent-iad.xx.fbcdn.net/hphotos-xfp1/t31.0-8/q83/s960x960/10482319_10100981404444665_795167157213236177_o.jpg',
+      profileImage: '/img/users/3.jpg',
       gender: 'Male'
     }];
 
@@ -199,7 +199,7 @@ angular.module('starter.services', [])
     id: 4,
     name: 'Tegan Jenner',
     blurb: 'Life is but a dream...',
-    profileImage: 'https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/409634_10100367216402425_2089169789_n.jpg?oh=9d6d64834df238d378d2ea39158570d2&oe=55AFBF15&__gda__=1437668510_a8f18d206be0adb715a6c90bcb04f46d',
+    profileImage: '/img/users/4.jpg',
     gender: 'Female'
   };
 });
