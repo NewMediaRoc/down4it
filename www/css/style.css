@@ -38,6 +38,21 @@ input.h1 {
 }
 
 
+.login-elements {
+  text-align: center;
+}
+
+.fb-button {
+  background-image: url("/img/facebook-login.png");
+  background-position: -22px -36px;
+  width: 362px;
+  height: 76px;
+  display: block;
+}
+
+.logo {
+  max-width: 90%;
+}
 
 
 .text-bubble {
