@@ -29,13 +29,13 @@ angular.module('starter.services', [])
     //Keys are the user ID
   var chats = {
     0: [
+      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }
+    ],
+    1: [
       { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' },
       { fromUser: true, text: 'Sure, want to meet up for a beer before?' },
       { fromUser: false, text: 'Sounds good, how about the bar next door?' },
       { fromUser: true, text: 'Perfect, see you at 7:30.' }
-    ],
-    1: [
-      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }
     ],
     2: [
       { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' }

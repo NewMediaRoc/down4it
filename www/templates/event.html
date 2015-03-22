@@ -43,15 +43,22 @@
           <!--<h3>Interested in {{user.preferences.genderInterest}}</h3>-->
       <!--</ion-item>-->
     <!--</ion-list>-->
-    <div class="row" style="height:25%">
-      <div class="col col-33" ng-repeat="user in users">
-        <a class="card" style="display:block" href="#/profile/{{user.userid}}?eventId={{event.id}}">
-          <div style="height:25%;overflow:hidden; line-height:80px">
-            <img ng-src="{{user.profileImage}}" style="width:100%;vertical-align: middle">
-          </div>
-        </a>
+    <a class="card" style="height:100px;width:100px;display:block;float:left" ng-repeat="user in users"
+       href="#/profile/{{user.id}}?eventId={{event.id}}">
+      <div style="line-height:100px" class="text-center">
+        <img ng-src="{{user.profileImage}}" style="max-width:100%;vertical-align: middle">
       </div>
-    </div>
+    </a>
+
+    <!--<div class="row" style="height:25%">-->
+      <!--<div class="col col-33" ng-repeat="user in users">-->
+        <!--<a class="card" style="display:block" href="#/profile/{{user.userid}}?eventId={{event.id}}">-->
+          <!--<div style="height:25%;overflow:hidden; line-height:80px">-->
+            <!--<img ng-src="{{user.profileImage}}" style="width:100%;vertical-align: middle">-->
+          <!--</div>-->
+        <!--</a>-->
+      <!--</div>-->
+    <!--</div>-->
 
 </ion-content>
 </ion-view>
