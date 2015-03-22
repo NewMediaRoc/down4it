@@ -1,8 +1,20 @@
 <ion-view hide-nav-bar="true">
-  <ion-content class="padding">
-	<img src="{{me.profileImage}}"/>
-	<input type="text" ng-model="me.name"/>
-	<input type="text" ng-model="me.blurb">
-	<a href="#/events" class="button">OK</a>
-  </ion-content>
+  <img src="{{me.profileImage}}" style="width:100%;"/>
+  <div class="faded-pane top padding">
+    This is what we've pulled in from Facebook, <br /> write a bit about yourself and get started!
+  </div>
+  <div class="faded-pane bottom padding">
+
+    <input type="text" class="h1" ng-model="me.name"/>
+    <!--<h4 style="color:white;">Interested in:-->
+      <!--<button type="button" class="button button-icon" ng-class="{'energized': interest==='any'}" ng-click="interest='any'">-->
+        <!--<span class="icon ion-man"></span>-->
+        <!--<span class="icon ion-woman"></span>-->
+      <!--</button>-->
+      <!--<button type="button" class="button button-icon icon ion-man" ng-class="{'energized': interest==='male'}" ng-click="interest='male'"></button>-->
+      <!--<button type="button" class="button button-icon icon ion-woman" ng-class="{'energized': interest==='female'}" ng-click="interest='female'"></button>-->
+    <!--</h4>-->
+    <input type="text" ng-model="me.blurb">
+    <a href="#/events" class="button pull-right button-energized button-large">Get Started!</a>
+  </div>
 </ion-view>

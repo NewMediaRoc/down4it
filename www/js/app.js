@@ -107,13 +107,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
     .state('profile', {
       url: '/profile/:userId',
+      params: {
+        eventId: 'eventId'
+      },
       templateUrl: 'templates/profile.html',
       controller: 'ProfileCtrl'
     })
     .state('chat', {
       url: '/chat/:userId',
       params: {
-        eventId: "eventId"
+        eventId: 'eventId'
       },
       templateUrl: 'templates/chat.html',
       controller: 'ChatCtrl'

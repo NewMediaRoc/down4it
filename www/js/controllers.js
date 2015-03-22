@@ -23,21 +23,15 @@ angular.module('starter.controllers', [])
   })
   .controller('ProfileCtrl', function($scope, $stateParams, Users) {
     console.log($stateParams.userId);
+    $scope.eventId = $stateParams.eventId;
     $scope.user = Users.get($stateParams.userId);
   })
-  .controller('ChatCtrl', function($scope, $stateParams, Chats, Events, Users) {
-    $scope.myPic = 'https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/409634_10100367216402425_2089169789_n.jpg?oh=9d6d64834df238d378d2ea39158570d2&oe=55AFBF15&__gda__=1437668510_a8f18d206be0adb715a6c90bcb04f46d';
+  .controller('ChatCtrl', function($scope, $stateParams, Chats, Events, Users, CurrentUser) {
+    $scope.myPic = CurrentUser.profileImage;
     //$scope.user = Users.get($stateParams.userId);
     var event = Events.get($stateParams.eventId);
     $scope.messages = Chats.get($stateParams.userId);
-    $scope.user = {
-      name: 'Brian Witt',
-      imageUrl: 'https://scontent-iad.xx.fbcdn.net/hphotos-xfp1/t31.0-8/q83/s960x960/10482319_10100981404444665_795167157213236177_o.jpg',
-      gender: 'Male',
-      relationshipType: 'friendship',
-      genderInterest: 'Women',
-      tagline: 'Life is but a dream...'
-    };
+    $scope.user = Users.get($stateParams.userId);
     console.log('eventId', $stateParams.userId, 'event', event, 'userId', $stateParams.userId, 'message', $scope.messages);
   })
   .controller('ConnectionsCtrl', function($scope, Chats) {
