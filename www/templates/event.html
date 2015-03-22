@@ -20,7 +20,7 @@
 
     <ion-list type="card">
       <ion-item ng-repeat="user in users | filter:filterText"
-                class="item-thumbnail-left" href="#/profile/{{user.profile.id}}">
+                class="item-thumbnail-left" href="#/profile/{{user.profile.id}}?eventId={{event.id}}">
           <img ng-src="{{user.profile.profileImage}}">
           <h2>{{user.profile.name}}</h2>
           <h3>{{user.profile.blurb}}</h3>

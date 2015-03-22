@@ -23,6 +23,7 @@ angular.module('starter.controllers', [])
   })
   .controller('ProfileCtrl', function($scope, $stateParams, Users) {
     console.log($stateParams.userId);
+    $scope.eventId = $stateParams.eventId;
     $scope.user = Users.get($stateParams.userId);
   })
   .controller('ChatCtrl', function($scope, $stateParams, Chats, Events, Users) {
