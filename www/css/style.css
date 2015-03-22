@@ -9,11 +9,33 @@
 .pull-left {
   float:left;
 }
-
-
-
-
-
+.faded-pane {
+  position:absolute;
+  top:10px;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  background:rgba(0,0,0,.2);
+  color:white;
+  text-align:center;
+}
+.faded-pane.bottom {
+  top:auto;
+  bottom:10px;
+}
+.faded-pane.top {
+  top:10px;
+  bottom:auto;
+}
+.faded-pane input {
+  background:none;
+  color:white;
+}
+input.h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  height:auto;
+}
 
 
 
