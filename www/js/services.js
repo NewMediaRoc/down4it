@@ -188,7 +188,7 @@ angular.module('starter.services', [])
     }
   };
 })
-.factory('currentUser', function() {
+.factory('CurrentUser', function() {
   return {
     id: 3,
     name: 'Brian Witt',
