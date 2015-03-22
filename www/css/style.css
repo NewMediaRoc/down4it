@@ -28,6 +28,10 @@ a.card h5 {
 a.card h2 {
   margin: 0;
 }
+.variable-height-list-item,
+.variable-height-list-item .item-content{
+  min-height:0;
+}
 .faded-pane {
   position:absolute;
   top:10px;
