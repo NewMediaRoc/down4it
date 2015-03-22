@@ -15,11 +15,8 @@ angular.module('starter.controllers', [])
     $scope.event = Events.get($stateParams.eventId);
     $scope.users = [];
     for (var i = 0; i < $scope.event.users.length; i++) {
-      $scope.users.push({
-        preferences: $scope.event.users[i].userPreferences,
-        profile: Users.get($scope.event.users[i].id)
-      });
-    }   
+      $scope.users.push(Users.get($scope.event.users[i]));
+    }
   })
   .controller('ProfileCtrl', function($scope, $stateParams, Users) {
     console.log($stateParams.userId);

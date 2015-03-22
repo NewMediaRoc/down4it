@@ -45,9 +45,9 @@
     <!--</ion-list>-->
     <div class="row" style="height:25%">
       <div class="col col-33" ng-repeat="user in users">
-        <a class="card" style="display:block" href="#/profile/{{user.profile.id}}?eventId={{event.id}}">
+        <a class="card" style="display:block" href="#/profile/{{user.userid}}?eventId={{event.id}}">
           <div style="height:25%;overflow:hidden; line-height:80px">
-            <img ng-src="{{user.profile.profileImage}}" style="width:100%;vertical-align: middle">
+            <img ng-src="{{user.profileImage}}" style="width:100%;vertical-align: middle">
           </div>
         </a>
       </div>
