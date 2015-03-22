@@ -145,7 +145,7 @@ angular.module('starter.services', [])
       id: 1,
       name: 'Sarah Analyst',
       blurb: 'Algorithms drive me wild',
-      profileImage: 'https://lh6.googleusercontent.com/frgSZ_kfkrFWWKQYtsoDS2-KUoUNF2TLPGByhJHWobIGxTj7p437ekTL5K1XC9uJOC-hqp0p5cYNR7cbKaLmdDbejKtidZOevL3xxtWOP-85o_4N6C6AnwGA1sTlOg',
+      profileImage: 'http://www2.pictures.stylebistro.com/gi/Zooey+Deschanel+Long+Hairstyles+Long+Straight+vfshTCL90Nyl.jpg',
       gender: 'Female'
     },
     {
