@@ -2,8 +2,8 @@ angular.module('starter.controllers', [])
 
   .controller('LoginCtrl', function($scope) {})
   .controller('MeCtrl', function($scope) {})
-  .controller('EventsCtrl', function($scope, events) {
-    $scope.events = events.all();
+  .controller('EventsCtrl', function($scope, Events) {
+    $scope.events = Events.all();
   })
   .controller('EventsNewCtrl', function($scope) {})
   .controller('EventCtrl', function($scope, $stateParams, Events, Users) {
