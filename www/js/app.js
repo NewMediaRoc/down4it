@@ -111,7 +111,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       controller: 'ProfileCtrl'
     })
     .state('chat', {
-      url: '/chat',
+      url: '/chat/:userId',
+      params: {
+        eventId: "eventId"
+      },
       templateUrl: 'templates/chat.html',
       controller: 'ChatCtrl'
     })
