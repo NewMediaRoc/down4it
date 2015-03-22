@@ -1,5 +1,5 @@
 <ion-view view-title="{{event.name}}">
-  <ion-content class="card event-card" ng-class="{'panel-shown':event.userIsUpForIt, 'panel-hidden':!event.userIsUpForIt}" >
+  <ion-content class="card event-card padding" ng-class="{'panel-shown':event.userIsUpForIt, 'panel-hidden':!event.userIsUpForIt}" >
     <button type="button" class="button button-icon button-large pull-right padding" ng-click="event.userIsUpForIt=!event.userIsUpForIt">
       <img ng-show="event.userIsUpForIt" src="img/Me-.png" style="max-height:60px;"/>
       <img ng-hide="event.userIsUpForIt"src="img/Me+.png" style="max-height:60px;" />
@@ -7,6 +7,7 @@
     <div style="padding-right:80px">
       <img ng-src="{{event.imgUrl}}" class="event-image" />
     </div>
+
     <h3>{{event.date}}</h3>
     <!--<h2>{{event.name}}</h2>-->
     <p>{{event.description}}</p>
@@ -42,10 +43,15 @@
           <!--<h3>Interested in {{user.preferences.genderInterest}}</h3>-->
       <!--</ion-item>-->
     <!--</ion-list>-->
-    <a class="card" style="max-width:30%;float:left" ng-repeat="user in users | filter:filterText"
-      href="#/profile/{{user.profile.id}}?eventId={{event.id}}">
-      <img ng-src="{{user.profile.profileImage}}" style="max-width:100%;max-height:100%">
-    </a>
+    <div class="row" style="height:25%">
+      <div class="col col-33" ng-repeat="user in users">
+        <a class="card" style="display:block" href="#/profile/{{user.profile.id}}?eventId={{event.id}}">
+          <div style="height:25%;overflow:hidden; line-height:80px">
+            <img ng-src="{{user.profile.profileImage}}" style="width:100%;vertical-align: middle">
+          </div>
+        </a>
+      </div>
+    </div>
 
 </ion-content>
 </ion-view>
