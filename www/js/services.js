@@ -30,26 +30,29 @@ angular.module('starter.services', [])
 
   // Some fake testing data
     //Keys are the user ID
-  var chats = [
-    { 0: [
+  var chats = {
+    0: [
+      { fromUser: false, text: 'Hey, you seem like you could be cool, want to go with me?' },
+      { fromUser: true, text: 'Sure, want to meet up for a beer before?' },
+      { fromUser: false, text: 'Sounds good, how about the bar next door?' },
+      { fromUser: true, text: 'Perfect, see you at 7:30.' }
+    ],
+    1: [
       { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
-    ]},
-    { 1: [
+    ],
+    2: [
       { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
-    ]},
-    { 2: [
+    ],
+    3: [
       { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
-    ]},
-    { 3: [
+    ],
+    4: [
       { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
-    ]},
-    { 4: [
+    ],
+    5: [
       { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
-    ]},
-    { 5: [
-      { fromUser: false, text: 'Hey, you seem like you could be cool, what to go with me?' }
-    ]}
-  ];
+    ]
+  };
 
   return {
     all: function() {
@@ -62,6 +65,11 @@ angular.module('starter.services', [])
       return chats[userId];
     }
   };
+})
+.factory('Users', function() {
+  return {
+
+  }
 })
 .factory('Events', function() {
   var events = [{
