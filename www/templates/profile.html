@@ -1,10 +1,10 @@
-<ion-view view-title="{{user.name}}">
-  <ion-content style="background-image:url({{user.profileImage}}); background-repeat: no-repeat; background-size: 100% auto">
+<ion-view view-title=""">
+  <ion-content style="background-image:url({{user.profileImage}}); background-repeat: no-repeat; background-size: auto 100%; background-position:top middle">
   </ion-content>
-  <div style="position: absolute;bottom:15%;left:10%;right:10%">
-    <h2>{{user.name}}</h2>
-    <p>{{user.tagline}}</p>
-    <a href="#/chat/{{user.id}}?eventId={{eventId}}" class="button button-large button-icon icon ion-chatbubbles pull-right" style="position:absolute;right:0;bottom:10%"></a>
+  <div class="faded-pane bottom">
+    <h1 class="text-white">{{user.name}}</h1>
+    <p class="text-white">{{user.blurb}}</p>
+    <a href="#/chat/{{user.id}}?eventId={{eventId}}" class="button button-large button-icon icon ion-chatbubbles text-white pull-right" style="position:absolute;right:0;bottom:10%"></a>
   </div>
 
 </ion-view>

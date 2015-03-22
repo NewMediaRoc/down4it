@@ -9,6 +9,25 @@
 .pull-left {
   float:left;
 }
+a.card {
+  text-decoration: none;
+}
+a.card:hover {
+  text-decoration: none;
+}
+a.card h4 {
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin:0
+}
+a.card h5 {
+  margin-top:5px;
+  margin-bottom:5px;
+}
+a.card h2 {
+  margin: 0;
+}
 .faded-pane {
   position:absolute;
   top:10px;
@@ -17,7 +36,7 @@
   right:10px;
   background:rgba(0,0,0,.2);
   color:white;
-  text-align:center;
+  /*text-align:center;*/
 }
 .faded-pane.bottom {
   top:auto;
@@ -29,6 +48,9 @@
 }
 .faded-pane input {
   background:none;
+  color:white;
+}
+.text-white {
   color:white;
 }
 input.h1 {
