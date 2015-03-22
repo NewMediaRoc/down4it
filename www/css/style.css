@@ -42,15 +42,16 @@ input.h1 {
   text-align: center;
 }
 
-.fb-button {
-  background-image: url("/img/facebook-login.png");
-  background-position: -22px -36px;
-  width: 362px;
-  height: 76px;
+.logo {
+  max-width: 90%;
+  padding: 5%;
+}
+
+.login-button {
   display: block;
 }
 
-.logo {
+.login-button img {
   max-width: 90%;
 }
 
