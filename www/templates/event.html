@@ -4,17 +4,20 @@
       <div class="item item-thumbnail-left">
         <img ng-src="{{event.imgUrl}}">
         <h2>{{event.name}}</h2>
-        <p>{{event}}</p>
+        <p>{{event.description}}</p>
       </div>
     </div>
 
 
     <ion-list type="card">
-      <ion-item ng-repeat="item in items | filter:filterText"
-                class="item-thumbnail-left" href="#/profile/12345">
-          <img ng-src="{{item.imgUrl}}">
-          <h2>{{item.name}}</h2>
-          <h3>{{item.date}}</h3>
+      <ion-item ng-repeat="user in users | filter:filterText"
+                class="item-thumbnail-left" href="#/profile/{{user.profile.id}}">
+          <img ng-src="{{user.profile.profileImage}}">
+          <h2>{{user.profile.name}}</h2>
+          <h3>{{user.profile.blurb}}</h3>
+          <h3>{{user.profile.gender}}</h3>
+          <h3>Looking for {{user.preferences.relationshipType}}</h3>
+          <h3>Interested in {{user.preferences.genderInterest}}</h3>
       </ion-item>
     </ion-list>
   </ion-content>
