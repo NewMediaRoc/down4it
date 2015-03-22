@@ -12,9 +12,6 @@ angular.module('starter.services', [])
       all: function() {
         return connections;
       },
-      remove: function(chat) {
-        connections.splice(connections.indexOf(chat), 1);
-      },
       get: function(chatId) {//this probably doesn't work
         for (var i = 0; i < connections.length; i++) {
           if (connections[i].id === parseInt(chatId)) {
