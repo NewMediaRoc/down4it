@@ -126,6 +126,7 @@ angular.module('starter.services', [])
     description: 'Just looking for someone to go on a run with',
     category: 'activity',
     date: 'Tonight',
+    imgUrl: '/img/events/2.jpg',
     userIsUpForIt: false,
     users: [{
       id: 2,
@@ -134,6 +135,66 @@ angular.module('starter.services', [])
         genderInterest: 'any'
       }
     }]
+  },
+  {
+    id: 3,
+    name: 'Kelly Clarkson',
+    description: 'Kelly Clarkson, who began singing as a young girl in her school choir, rose to national fame as the first-ever winner of the popular television show American Idol. While 10,000 hopeful singers auditioned for the show, Clarkson excelled throughout the competition, ultimately taking home the title of American Idol and winning a recording contract with RCA.',
+    category: 'concert',
+    date: '7/21/2015',
+    imgUrl: '/img/events/3.jpg',
+    userIsUpForIt: false,
+    users: []
+  },
+  {
+    id: 4,
+    name: 'Lindsay Stirling',
+    description: 'indsey Stirling\'s unconventional combination of classical violin and dubstep beats coupled with a ballet-type dancing style has garnered more than 3.5 million subscribers and counting on her YouTube channel, Lindseystomp. Indeed the outre performance artist has paved her own way, working with director/cinematographer Devin Graham to produce her series of uniquely styled videos.',
+    category: 'concert',
+    date: '3/25/2015',
+    imgUrl: '/img/events/4.jpg',
+    userIsUpForIt: true,
+    users: []
+  },
+  {
+    id: 5,
+    name: 'The Price Is Right',
+    description: 'What a great fun show. Took my family to see this even though they hadn\'t seen the tv version, and it had been years since I had. From the moment the announcer, a very talented Andy Martello, picks up his microphone until the Wheel has spun for the last time it was a blast.',
+    category: 'activity',
+    date: '5/12/2015',
+    imgUrl: '/img/events/5.jpg',
+    userIsUpForIt: false,
+    users: []
+  },
+  {
+    id: 6,
+    name: 'Kenny Chesney',
+    description: 'I have been to three Kenny Chesney shows and he does amazing!! He makes you have a good time, you\'re money is well spent, always have tricks up his sleeve that leave you wanting more! I know people blame Kenny for echo but that\'s what happens when a concert is played in a sports stadium. Kenny is also not an egomatic for those of you who think he is. I have gone to other concerts and they are boring compared to Kenny Chesney. Keep up the good work Kenny!!!',
+    category: 'concert',
+    date: '3/30/2015',
+    imgUrl: '/img/events/6.jpg',
+    userIsUpForIt: false,
+    users: []
+  },
+  {
+    id: 7,
+    name: 'One Direction',
+    description: 'The sound is fantastic. Very fun to attend. They involve fans in different things. I had a blast last year and can\'t wait for this year.',
+    category: 'concert',
+    date: '4/15/2015',
+    imgUrl: '/img/events/7.jpg',
+    userIsUpForIt: false,
+    users: []
+  },
+  {
+    id: 8,
+    name: 'Daniel Tosh',
+    description: 'Daniel was great live..... Incredibly offensive but in all the right comedian ways. House was packed. His opening comedian was great too!',
+    category: 'comedy',
+    date: '5/18/2015',
+    imgUrl: '/img/events/8.jpg',
+    userIsUpForIt: true,
+    users: []
   }]
 
   return {
