@@ -43,8 +43,8 @@
       <!--</ion-item>-->
     <!--</ion-list>-->
     <a class="card" style="max-width:30%;float:left" ng-repeat="user in users | filter:filterText"
-      href="#/profile/{{user.profile.id}}?eventId={{event.id}}">
-      <img ng-src="{{user.profile.profileImage}}" style="max-width:100%;max-height:100%">
+      href="#/profile/{{user.userid}}?eventId={{event.id}}">
+      <img ng-src="{{user.profileImage}}" style="max-width:100%;max-height:100%">
     </a>
 
 </ion-content>

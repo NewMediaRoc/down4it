@@ -75,27 +75,7 @@ angular.module('starter.services', [])
       relationshipType: 'friendship',
       genderInterest: 'any'
     },
-    users: [{
-      id: 0,
-      userPreferences: {
-        relationshipType: 'friendship',
-        genderInterest: 'any'
-      }
-    },
-    {
-      id: 1,
-      userPreferences: {
-        relationshipType: 'dating',
-        genderInterest: 'women'
-      }
-    },
-    {
-      id: 2,
-      userPreferences: {
-        relationshipType: 'friendship',
-        genderInterest: 'any'
-      }
-    }]
+    users: [0,1,2]
   },
   {
     id: 1,
@@ -105,20 +85,7 @@ angular.module('starter.services', [])
     date: '3/26/15',
     imgUrl: '/img/events/1.jpg',
     userIsUpForIt: false,
-    users: [{
-      id: 0,
-      userPreferences: {
-        relationshipType: 'friendship',
-        genderInterest: 'any'
-      }
-    },
-    {
-      id: 1,
-      userPreferences: {
-        relationshipType: 'dating',
-        genderInterest: 'women'
-      }
-    }]
+    users: [0,1]
   },
   {
     id: 2,
@@ -128,13 +95,7 @@ angular.module('starter.services', [])
     date: 'Tonight',
     imgUrl: '/img/events/2.jpg',
     userIsUpForIt: false,
-    users: [{
-      id: 2,
-      userPreferences: {
-        relationshipType: 'friendship',
-        genderInterest: 'any'
-      }
-    }]
+    users: [2]
   },
   {
     id: 3,
@@ -144,7 +105,7 @@ angular.module('starter.services', [])
     date: '7/21/2015',
     imgUrl: '/img/events/3.jpg',
     userIsUpForIt: false,
-    users: []
+    users: [0,1,2,7,8]
   },
   {
     id: 4,
@@ -154,7 +115,7 @@ angular.module('starter.services', [])
     date: '3/25/2015',
     imgUrl: '/img/events/4.jpg',
     userIsUpForIt: true,
-    users: []
+    users: [0,3,5,6,7,8]
   },
   {
     id: 5,
@@ -164,7 +125,7 @@ angular.module('starter.services', [])
     date: '5/12/2015',
     imgUrl: '/img/events/5.jpg',
     userIsUpForIt: false,
-    users: []
+    users: [0,1,6,7,8]
   },
   {
     id: 6,
@@ -174,7 +135,7 @@ angular.module('starter.services', [])
     date: '3/30/2015',
     imgUrl: '/img/events/6.jpg',
     userIsUpForIt: false,
-    users: []
+    users: [0,1,2,3,8]
   },
   {
     id: 7,
@@ -184,7 +145,7 @@ angular.module('starter.services', [])
     date: '4/15/2015',
     imgUrl: '/img/events/7.jpg',
     userIsUpForIt: false,
-    users: []
+    users: [0,5,6,7,8]
   },
   {
     id: 8,
@@ -194,7 +155,7 @@ angular.module('starter.services', [])
     date: '5/18/2015',
     imgUrl: '/img/events/8.jpg',
     userIsUpForIt: true,
-    users: []
+    users: [7,8]
   }]
 
   return {
@@ -238,6 +199,34 @@ angular.module('starter.services', [])
       name: 'Brian Witt',
       blurb: 'I hate going to the grocery store alone',
       profileImage: '/img/users/3.jpg',
+      gender: 'Male'
+    },
+    {
+      id: 5,
+      name: 'Joe Smith',
+      blurb: 'I like to have fun',
+      profileImage: '/img/users/5.jpg',
+      gender: 'Male'
+    },
+    {
+      id: 6,
+      name: 'Jenna Greer',
+      blurb: 'Where\'s the party',
+      profileImage: '/img/users/6.jpg',
+      gender: 'Female'
+    },
+    {
+      id: 7,
+      name: 'Alphonso Michaels',
+      blurb: 'Will you be my friend',
+      profileImage: '/img/users/7.jpg',
+      gender: 'Male'
+    },
+    {
+      id: 8,
+      name: 'Alex Johnson',
+      blurb: 'Don’t go alone',
+      profileImage: '/img/users/8.jpg',
       gender: 'Male'
     }];
 
