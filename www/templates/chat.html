@@ -8,7 +8,7 @@
   <ion-content class="padding" style="padding-top:40px">
     <div ng-repeat="message in messages" ng-class="{'text-right':!message.fromUser}" class="clearfix">
       <img ng-if="!message.fromUser"  ng-src="{{myPic}}" style="max-width: 64px; max-height: 64px;margin-top:20px;" class="pull-right" />
-      <img ng-if="message.fromUser" ng-src="{{user.imageUrl}}" style="max-width: 64px; max-height: 64px;margin-top:20px;" class="pull-left" />
+      <img ng-if="message.fromUser" ng-src="{{user.profileImage}}" style="max-width: 64px; max-height: 64px;margin-top:20px;" class="pull-left" />
       <div style="overflow:hidden">
         <p class="text-bubble" ng-class="{'right':!message.fromUser, 'left': message.fromUser}">
           {{message.text}}

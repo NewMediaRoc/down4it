@@ -34,10 +34,17 @@ angular.module('starter.controllers', [])
     $scope.user = Users.get($stateParams.userId);
     console.log('eventId', $stateParams.userId, 'event', event, 'userId', $stateParams.userId, 'message', $scope.messages);
   })
-  .controller('ConnectionsCtrl', function($scope, Chats) {
-    $scope.chats = Chats.all();
-    $scope.remove = function(chat) {
-      Chats.remove(chat);
+  .controller('ConnectionsCtrl', function($scope, Connections, Users, Events) {
+    var connections = Connections.all();
+
+    $scope.chats = [];
+
+    for (var i = 0; i < connections.length; i++) {
+      $scope.chats.push({
+        id: connections[i].id,
+        user: Users.get(connections[i].userId),
+        event: Events.get(connections[i].eventId)
+      });
     }
   })
 ;
