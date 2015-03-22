@@ -1,10 +1,19 @@
 <ion-view view-title="">
   <ion-content>
     <div class="list">
-      <div class="item item-thumbnail-left">
-        <img ng-src="{{event.imgUrl}}">
-        <h2>{{event.name}}</h2>
-        <p>{{event.description}}</p>
+      <div class="item">
+        <div class="row">
+          <div class="col-20">
+            <img ng-src="{{event.imgUrl}}" style="max-width:90%;max-height:100%" />
+          </div>
+          <div class="col-60">
+            <h2>{{event.name}}</h2>
+            <p>{{event.description}}</p>
+          </div>
+          <div class="col-20 text-right">
+            <button type="button" class="button button-icon button-large ion-thumbsup" ng-class="{'stable':!event.userIsUpForIt, 'positive':event.userIsUpForIt}"></button>
+          </div>
+        </div>
       </div>
     </div>
 

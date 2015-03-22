@@ -104,6 +104,7 @@ angular.module('starter.services', [])
     id: 1,
     name: 'Katy Perry',
     description: 'Katy Perry live in concert at CMAC',
+    category: 'concert',
     date: '3/26/15',
     imgUrl: 'http://s1.ticketm.net/tm/en-us/dbimages/163544a.jpg',
     userIsUpForIt: false,
@@ -126,6 +127,7 @@ angular.module('starter.services', [])
     id: 2,
     name: 'Jog Around Cobbs Hill',
     description: 'Just looking for someone to go on a run with',
+    category: 'activity',
     date: 'Tonight',
     userIsUpForIt: false,
     users: [{

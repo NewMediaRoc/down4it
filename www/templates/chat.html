@@ -6,11 +6,14 @@
 -->
 <ion-view view-title="{{user.name}}">
   <ion-content class="padding" style="padding-top:40px">
-    <p ng-repeat="message in messages" ng-class="{'text-right':!message.fromUser}" class="clearfix">
-      <img ng-src="{{message.fromUser ? user.imageUrl : myPic}}" style="max-width: 64px; max-height: 64px;vertical-align: top;" ng-class="{'pull-right':!message.fromUser}">
-      <span class="text-bubble" ng-class="{'right':!message.fromUser, 'left': message.fromUser}">
-        {{message.text}}
-      </span>
-    </p>
+    <div ng-repeat="message in messages" ng-class="{'text-right':!message.fromUser}" class="clearfix">
+      <img ng-if="!message.fromUser"  ng-src="{{myPic}}" style="max-width: 64px; max-height: 64px;margin-top:20px;" class="pull-right" />
+      <img ng-if="message.fromUser" ng-src="{{user.imageUrl}}" style="max-width: 64px; max-height: 64px;margin-top:20px;" class="pull-left" />
+      <div style="overflow:hidden">
+        <p class="text-bubble" ng-class="{'right':!message.fromUser, 'left': message.fromUser}">
+          {{message.text}}
+        </p>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
