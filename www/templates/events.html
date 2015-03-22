@@ -1,9 +1,9 @@
-<ion-view view-title="Events">
+<ion-view view-title="">
   <ion-content class="padding">
-    <div class="list list-inset">
+    <div class="list list-inset" style="margin-top:0">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search" ng-model="filterText">
+        <input type="text" placeholder="I'm up for ..." ng-model="filterText">
       </label>
     </div>
     <ion-list type="card">
@@ -17,4 +17,5 @@
       </ion-item>
     </ion-list>
   </ion-content>
+  <a href="#/new-event" class="button button-block button-balanced" style="position:absolute;bottom:0;left:10px;right:10px;">Something New!</a>
 </ion-view>

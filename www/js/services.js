@@ -66,11 +66,6 @@ angular.module('starter.services', [])
     }
   };
 })
-.factory('Users', function() {
-  return {
-
-  }
-})
 .factory('Events', function() {
   var events = [{
     id: 0,
@@ -156,7 +151,7 @@ angular.module('starter.services', [])
     }
   };
 })
-.factory('users', function() {
+.factory('Users', function() {
   var users = [{
       id: 0,
       name: 'Kelly Programmer',
